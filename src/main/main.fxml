@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.StatusBar?>
+
+<AnchorPane prefHeight="676.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <children>
+      <Button fx:id="btn_Switch" layoutX="953.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="37.0" prefWidth="54.0" text="Switch To Scene 2" />
+      <MenuBar layoutY="2.0" prefHeight="30.0" prefWidth="1050.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Print F5" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="View Reports" />
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Contact Developer" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <StatusBar layoutY="646.0" prefWidth="1050.0" text="" />
+      <TextField fx:id="txt_searchbar" layoutX="248.0" layoutY="57.0" prefHeight="30.0" prefWidth="392.0" />
+      <TextField fx:id="txt_qty" layoutX="698.0" layoutY="57.0" prefHeight="30.0" prefWidth="74.0" />
+      <Label layoutX="174.0" layoutY="61.0" prefHeight="22.0" prefWidth="67.0" text="Search">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="61.0" prefHeight="22.0" prefWidth="67.0" text="Qty">
+         <font>
+            <Font name="Eras Demi ITC" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_add" layoutX="798.0" layoutY="57.0" mnemonicParsing="false" onAction="#getPrice" prefHeight="30.0" prefWidth="54.0" text="Add">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="CartTable" layoutX="174.0" layoutY="116.0" prefHeight="386.0" prefWidth="678.0">
+        <columns>
+          <TableColumn fx:id="col_dishid" prefWidth="141.0" text="Item ID" />
+          <TableColumn fx:id="col_dishname" prefWidth="157.0" text="Item Name" />
+            <TableColumn fx:id="col_dishprice" prefWidth="120.0" text="Item Price" />
+            <TableColumn fx:id="col_dishquant" minWidth="0.0" prefWidth="120.0" text="Item Quantity" />
+            <TableColumn fx:id="col_totalamt" prefWidth="139.0" text="Total" />
+        </columns>
+      </TableView>
+      <TextField fx:id="total_amt" layoutX="698.0" layoutY="521.0" prefHeight="30.0" prefWidth="155.0" />
+      <Label layoutX="591.0" layoutY="525.0" prefHeight="22.0" prefWidth="104.0" text="Total Amt">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_print" layoutX="174.0" layoutY="518.0" mnemonicParsing="false" onAction="#printBill" prefHeight="37.0" prefWidth="74.0" text="Print">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_Switch111" layoutX="174.0" layoutY="574.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="37.0" prefWidth="114.0" text="Export Invoice">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_exit" layoutX="270.0" layoutY="518.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="74.0" text="Clear">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="user_logged" layoutX="41.0" layoutY="652.0" text="Logge In As :">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
